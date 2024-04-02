@@ -3,11 +3,17 @@ pipeline{
         label 'k8s-node'
     }
     stages{
+       stage('copydockerfile'){
+        steps{
+            script{
+                sh "cp /.cicd/Dockerfile /home/raksharoshni/jenkis/workspace/i27-clothing_master/"
+            }
+        }
+       }
        stage('dockerimagebuild'){
           steps{
             script{
-                sh "ls -la"
-                //sh "docker build -t node-app-i27 ."
+                sh "docker build -t node-app-i27 ."
             }
           }
        }
