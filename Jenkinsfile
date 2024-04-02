@@ -20,7 +20,7 @@ pipeline{
        stage('dockercontainerbuild'){
            steps{
             script{
-                sh "docker run -dit -p 3001:3000 node-app-i27"
+                sh "docker run -dit -p 3002:3000 node-app-i27"
             }
 
            }
