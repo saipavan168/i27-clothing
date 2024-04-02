@@ -6,7 +6,8 @@ pipeline{
        stage('dockerimagebuild'){
           steps{
             script{
-                sh "docker build -t node-app-i27 ."
+                sh "ls -la"
+                //sh "docker build -t node-app-i27 ."
             }
           }
        }
